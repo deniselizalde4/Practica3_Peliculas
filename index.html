@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Tareas del Día</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div>
+        <h2>📋 Mis películas</h2>
+        <p>Organiza tu lista</p>
+
+        <div class="menu">
+            <button class="menu-item active" id="toggleMovies">📋 Todas las películas</button>
+
+            <div class="submenu" id="movieSubmenu">
+                <button class="menu-item">⏳ Pendientes</button>
+                <button class="menu-item">✔️ Favoritas</button>
+                <button class="menu-item">📅 Calendario</button>
+                <button class="menu-item">📊 Estadísticas</button>
+                <button class="menu-item">⚙️ Ajustes</button>
+            </div>
+        </div>
+    </div>
+
+    <p class="quote">"La disciplina es el puente entre metas y logros."</p>
+</div>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <header class="header">
+      <h1 id="app-title">Mis peliculas</h1>
+      <div class="user">👤</div>
+    </header>
+
+    <!-- FORM -->
+    <section class="card">
+      <h3>Agregar una nueva pelicula</h3>
+
+      <div class="form-row">
+        <input type="text" id="taskInput" placeholder="¿Qué necesitas hacer?">
+        <select id="priority">
+          <option>Alta</option>
+          <option selected>Media</option>
+          <option>Baja</option>
+        </select>
+        <input type="date" id="date">
+        <button id="btn">+ Agregar pelicula</button>
+      </div>
+    </section>
+
+    <!-- FILTROS + STATS -->
+    <section class="card">
+      <div class="filters">
+        <h3>Filtrar tareas</h3>
+        <button class="filter active">Todas</button>
+        <button class="filter">Pendientes</button>
+        <button class="filter">Completadas</button>
+      </div>
+
+      <div class="stats">
+        <div class="stat-box">Total <span id="total">0</span></div>
+        <div class="stat-box">Pendientes <span id="pending">0</span></div>
+        <div class="stat-box">Completadas <span id="completed">0</span></div>
+      </div>
+    </section>
+
+    <!-- LISTA -->
+    <section class="card">
+      <h3>Lista de peliculas</h3>
+      <div id="taskList"></div>
+    </section>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
